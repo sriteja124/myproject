@@ -10,7 +10,8 @@ pipeline {
         }
 	stage("Build") {
            steps {
-	       sh pro.sh
+	       chmod 777 ./pro.sh
+               ./pro.sh
 		  
 	   }
 	}
