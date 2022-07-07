@@ -6,8 +6,13 @@ pipeline {
             steps {
                 echo 'Hello World'
 		checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sriteja124/myproject.git']]])
-                
             }
         }
+	stage("Build") {
+           steps {
+	       bash pro.sh
+	   }
+	}
+			
     }
 }
