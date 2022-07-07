@@ -10,7 +10,8 @@ pipeline {
         }
 	stage("Build") {
            steps {
-	       bash pro.sh
+	       sh pro.sh
+		  
 	   }
 	}
 			
